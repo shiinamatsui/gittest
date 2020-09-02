@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>diplayプロパティ</title>
+  <style>
+    body {
+      windth: 750px;
+      margin: 0 auto;
+    }
+    h2 {
+      margin-top:30px;
+      padding-left: 10px;
+      border-bottom: 3px solid #63a4c2;
+    }
+    div p {
+      border: 2px solid #6ac5ac;
+      padding: 5px;
+      margin-top: 10px;
+    }
+    strong {
+      border: 2px solid #fdc72f;
+      padding: 5px;
+      margin: 10px;
+      height: 50px;
+    }
+    div {
+      border: 2px solid #d64078;
+      padding: 10px;
+      margin: 20px 0 0;
+    }
+    .inlin {
+      display: inline
+    }
+    .block {
+      dispiay: block;
+    }
+    .inlin-block {
+      display: inline-block;
+    }
+    .none {
+      display: none;
+    }
+    .inherit {
+      display: inherit;
+    }
+    </style>
+</head>
+<body>
+  <h2>inlineの確認</h2>
+  <div>
+    <p>p要素の初期化のまま(block)</p>
+    <p class="inline">p票素にinlineを指定</p>
+    <p class="inline">p票素にinlineを指定</p>
+    <p class="none">p票素にnoneを指定</p>
+  </div>
+  <p>p要素はデフォルトでblockが指定されているため、ブロックレベル要素のように扱われます。
+    <br>p要素にinlineを指定した場合、インライン要素のように扱われ、横並びで表示されます。
+  </p>
+  <h2>blockとinline-blockの確認</h2>
+  <div>
+    <strong>strong要素の初期化のまま(inline)</strong>
+    <strong class="block">strong要素にblockを指定</strong>
+    <strong class="none">strong要素にnoneを指定</strong>
+    <strong class="inline-block">strong要素にinline-blockを指定</strong>
+    <strong class="inline-block">strong要素にinline-blockを指定</strong>
+  </div>
+  <p>strong要素はデフォルトでinlineが指定されているため、インラインレベル要素のように扱われます。
+    <br>strong要素にblockを指定した場合、ブロックレベル要素のように扱われます。
+    <br>strong要素にinlineを指定した場合、インラインレベル要素のように扱われますが、
+    <br>高さや横幅が指定できるようになるため、strongタグに指定した高さ50pxが適応されます。
+  </p>
+  <h2>inheritの確認</h2>
+  <div>
+    <strong>strong要素の初期化のまま(inline)</strong>
+    <strong>strong要素の初期化のまま(inline)</strong>
+  </div>
+  <p>strong要素はデフォルトでinlineが指定されているため、横並びで表示される。</p>
+  <div>
+    <strong class="inherit">strong要素にinheritを指定</strong>
+    <strong class="inherit">strong要素にinheritを指定</strong>
+  </div>
+  <p>strong要素にinheritを指定した場合、親要素であるdiv要素の値(block)が適応される</p>
+</body>
+</html>
