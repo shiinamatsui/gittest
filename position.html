@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>positionプロパティ</title>
+    <style>
+      .elem {
+        position: static;
+        border: 3px solid #6ac5ac;
+      }
+      .fixed {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        border: 3px solid #fdc72f;
+        windth: 200px;
+      }
+      .relative {
+        position: relative;
+        border: 3px solid #d64078;
+        left: 40px;
+        top: 100px;
+        windth: 500px;
+        margin-bottom: 50px;
+      }
+      .adsolute {
+        position: adsolute;
+        border: 3px solid #0080c0;
+        background-color: #fff;
+        top: 90px;
+        right: 30px;
+        windth: 300px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="elem">
+      <p>staticを指定</p>
+      </div>
+      <div class="fixed">
+        <p>fixedを指定</p>
+      </div>
+      <div class="relative">
+        <p>relativeを指定</p>
+      </div>
+      <div class="relative">
+        <p>これはrelativeな要素です。もしこの要素がposition: static;の場合、adsoluteな子要素の位置はずれてしまいます。そして、子要素はbodyからの相対位置で指定されます。</p>
+        <div class="adsolute">
+          <p>adsoluteを指定。親要素からの相対位置で指定されます。</p>
+        </div>
+      </div>
+  </body>
+</html>
