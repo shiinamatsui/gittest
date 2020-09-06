@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+html,body{
+  height: 100%;
+}
+
+table {
+  border: 1px solid gray;
+  windth: 70%;
+  height: 80%
+}
+td {
+  border: 1px solid gray;
+}
